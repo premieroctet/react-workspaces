@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCount } from 'core/store/selectors/count';
@@ -7,7 +7,7 @@ import Count from '../components/Count';
 
 type CountState = number;
 
-const Home = (props: any) => {
+const Home = () => {
   const dispatch: any = useDispatch();
   const count: CountState = useSelector(getCount);
 
