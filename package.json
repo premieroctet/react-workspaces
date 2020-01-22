@@ -1,0 +1,25 @@
+{
+  "name": "react-workspace",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "core",
+      "mobile",
+      "website"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-typescript-transformer"
+    ]
+  },
+  "scripts": {
+    "reset-modules": "rm -rf node_modules/ yarn.lock ./*/node_modules",
+    "reset-yarn": "yarn cache clean",
+    "reset-rn": "watchman watch-del-all; rm -fr $TMPDIR/react-*; rm -rf $TMPDIR/haste-map-react-native-packager-*",
+    "reset-cache": "yarn reset-yarn && yarn reset-rn",
+    "reset": "yarn reset-modules && yarn reset-cache"
+  },
+  "devDependencies": {}
+}
