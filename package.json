@@ -11,11 +11,12 @@
     "nohoist": [
       "**/react-native",
       "**/react-native/**",
-      "**/react-native-typescript-transformer"
+      "**/react-native-typescript-transformer",
+      "**/react-redux"
     ]
   },
   "scripts": {
-    "reset-modules": "rm -rf node_modules/ yarn.lock ./*/node_modules",
+    "reset-modules": "rm -rf node_modules/ ./*/node_modules",
     "reset-yarn": "yarn cache clean",
     "reset-rn": "watchman watch-del-all; rm -fr $TMPDIR/react-*; rm -rf $TMPDIR/haste-map-react-native-packager-*",
     "reset-cache": "yarn reset-yarn && yarn reset-rn",
